@@ -39,6 +39,8 @@
 	<string>$(CURRENT_PROJECT_VERSION)</string>
 	<key>FacebookAppID</key>
 	<string>556562512368792</string>
+	<key>FacebookClientToken</key>
+	<string>8fbab40a6d479a17b52673713188e22c</string>
 	<key>FacebookDisplayName</key>
 	<string>AWS Exam</string>
 	<key>ITSAppUsesNonExemptEncryption</key>
