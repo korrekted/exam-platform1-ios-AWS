@@ -12,7 +12,7 @@ final class GlobalDefinitions {
     static let sdkDomainUrl = "https://analytics.korrekted.com"
     static let sdkApiKey = "Cpj8uw8AYgDAeDed"
 
-    static let applicationTag = "EXAM_MILITARY"
+    static let applicationTag = "EXAM_AWS"
 
     static let amplitudeApiKey = "b503251969f4b1d7901d2f7d1388d476"
     static let appsFlyerApiKey = "DCciCfYXjMQ8QnkdCg8qzk"
