@@ -7,8 +7,7 @@
 
 import UIKit
 import RxCocoa
-import Firebase
-import RushSDK
+import OtterScaleiOS
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -27,10 +26,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.rootViewController = vc
         window?.makeKeyAndVisible()
         
-        FirebaseApp.configure()
-        TestFinishObserver.shared.startObserve()
+        FacebookManager.shared.initialize(app: application, launchOptions: launchOptions)
+        BranchManager.shared.initialize(launchOptions: launchOptions)
+        AmplitudeManager.shared.initialize()
+        FirebaseManager.shared.initialize()
+        OtterScale.shared.initialize(host: GlobalDefinitions.otterScaleHost, apiKey: GlobalDefinitions.otterScaleApiKey)
         
-        addDelegates()
+        PurchaseValidationObserver.shared.startObserve()
+        TestFinishObserver.shared.startObserve()
         
         runProvider(on: vc.view)
         
@@ -43,11 +46,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
         sdkProvider.application(app, open: url, options: options)
         
+        FacebookManager.shared.application(app, open: url, options: options)
+        BranchManager.shared.application(app, open: url, options: options)
+        
         return true
     }
     
     func application(_ application: UIApplication, continue userActivity: NSUserActivity, restorationHandler: @escaping ([UIUserActivityRestoring]?) -> Void) -> Bool {
         sdkProvider.application(application, continue: userActivity, restorationHandler: restorationHandler)
+        
+        BranchManager.shared.application(continue: userActivity)
         
         return true
     }
@@ -69,48 +77,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 }
 
-// MARK: SDKPurchaseMediatorDelegate
-extension AppDelegate: SDKPurchaseMediatorDelegate {
-    func purchaseMediatorDidValidateReceipt(response: ReceiptValidateResponse?) {
-        guard let response = response else {
-            return
-        }
-        
-        let session = Session(response: response)
-        
-        SessionManager().store(session: session)
-    }
-}
-
-// MARK: SDKUserManagerMediatorDelegate
-extension AppDelegate: SDKUserManagerMediatorDelegate {
-    func userManagerMediatorDidReceivedFeatureApp(userToken: String) {
-        SessionManager().set(userToken: userToken)
-    }
-}
-
 // MARK: Private
 private extension AppDelegate {
     func runProvider(on view: UIView) {
-        let session = SessionManager().getSession()
-        
-        let userId: String?
-        if let cachedUserId = session?.userId {
-            userId = String(cachedUserId)
-        } else {
-            userId = nil
-        }
-        
         let settings = SDKSettings(backendBaseUrl: GlobalDefinitions.sdkDomainUrl,
                                    backendApiKey: GlobalDefinitions.sdkApiKey,
-                                   amplitudeApiKey: GlobalDefinitions.amplitudeApiKey,
+                                   amplitudeApiKey: nil,
                                    appsFlyerApiKey: GlobalDefinitions.appsFlyerApiKey,
-                                   facebookActive: true,
-                                   branchActive: true,
-                                   firebaseActive: true,
+                                   facebookActive: false,
+                                   branchActive: false,
+                                   firebaseActive: false,
                                    applicationTag: GlobalDefinitions.applicationTag,
-                                   userToken: session?.userToken,
-                                   userId: userId,
+                                   userToken: SessionManager().getSession()?.userToken,
+                                   userId: nil,
                                    view: view,
                                    shouldAddStorePayment: true,
                                    featureAppBackendUrl: GlobalDefinitions.domainUrl,
@@ -120,10 +99,5 @@ private extension AppDelegate {
         sdkProvider.initialize(settings: settings) { [weak self] success in
             self?.generateStepInSplash.accept(success)
         }
-    }
-    
-    func addDelegates() {
-        SDKStorage.shared.purchaseMediator.add(delegate: self)
-        SDKStorage.shared.userManagerMediator.add(delegate: self)
     }
 }
