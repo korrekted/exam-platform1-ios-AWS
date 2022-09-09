@@ -32,6 +32,7 @@
 		96BF1D3126AA976F00AEF6D3 /* MediumRateWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BF1D2526AA976F00AEF6D3 /* MediumRateWidget.swift */; };
 		96BF1D3226AA977E00AEF6D3 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 96BF1CFC26AA973300AEF6D3 /* Localizable.strings */; };
 		96BF1D3826AA980400AEF6D3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 96BF1D3726AA980400AEF6D3 /* GoogleService-Info.plist */; };
+		DE1D022628CB17BF003AC1FD /* Onboarding.Chart.json in Resources */ = {isa = PBXBuildFile; fileRef = DE1D022528CB17BF003AC1FD /* Onboarding.Chart.json */; };
 		DE68353F28926A7100FAEF96 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE68336928926A7100FAEF96 /* UIColorExtension.swift */; };
 		DE68354028926A7100FAEF96 /* Collection+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE68336A28926A7100FAEF96 /* Collection+Extension.swift */; };
 		DE68354128926A7100FAEF96 /* Observable+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE68336B28926A7100FAEF96 /* Observable+Utils.swift */; };
@@ -347,7 +348,6 @@
 		DE68367728926A7200FAEF96 /* OImproveCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE68352128926A7100FAEF96 /* OImproveCell.swift */; };
 		DE68367828926A7200FAEF96 /* ReferencesTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE68352328926A7100FAEF96 /* ReferencesTableCell.swift */; };
 		DE68367928926A7200FAEF96 /* ReferencesTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE68352428926A7100FAEF96 /* ReferencesTableView.swift */; };
-		DE68367A28926A7200FAEF96 /* Onboarding.Chart.json in Resources */ = {isa = PBXBuildFile; fileRef = DE68352628926A7100FAEF96 /* Onboarding.Chart.json */; };
 		DE68367B28926A7200FAEF96 /* OWhenStudyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE68352728926A7100FAEF96 /* OWhenStudyCell.swift */; };
 		DE68367C28926A7200FAEF96 /* WelcomeSlide1View.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE68352928926A7100FAEF96 /* WelcomeSlide1View.swift */; };
 		DE68367D28926A7200FAEF96 /* WelcomeSlideIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE68352A28926A7100FAEF96 /* WelcomeSlideIndicatorView.swift */; };
@@ -435,6 +435,7 @@
 		96BF1D3E26AA9A2C00AEF6D3 /* StatsWidgetsExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = StatsWidgetsExtension.entitlements; sourceTree = "<group>"; };
 		9AD36963EFC97173B1FB2BD8 /* Pods-AWS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AWS.release.xcconfig"; path = "Target Support Files/Pods-AWS/Pods-AWS.release.xcconfig"; sourceTree = "<group>"; };
 		A78833E0C997890D82CEDB38 /* Pods-AWS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AWS.debug.xcconfig"; path = "Target Support Files/Pods-AWS/Pods-AWS.debug.xcconfig"; sourceTree = "<group>"; };
+		DE1D022528CB17BF003AC1FD /* Onboarding.Chart.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Onboarding.Chart.json; sourceTree = "<group>"; };
 		DE68336928926A7100FAEF96 /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		DE68336A28926A7100FAEF96 /* Collection+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Collection+Extension.swift"; sourceTree = "<group>"; };
 		DE68336B28926A7100FAEF96 /* Observable+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Observable+Utils.swift"; sourceTree = "<group>"; };
@@ -750,7 +751,6 @@
 		DE68352128926A7100FAEF96 /* OImproveCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OImproveCell.swift; sourceTree = "<group>"; };
 		DE68352328926A7100FAEF96 /* ReferencesTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReferencesTableCell.swift; sourceTree = "<group>"; };
 		DE68352428926A7100FAEF96 /* ReferencesTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReferencesTableView.swift; sourceTree = "<group>"; };
-		DE68352628926A7100FAEF96 /* Onboarding.Chart.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Onboarding.Chart.json; sourceTree = "<group>"; };
 		DE68352728926A7100FAEF96 /* OWhenStudyCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OWhenStudyCell.swift; sourceTree = "<group>"; };
 		DE68352928926A7100FAEF96 /* WelcomeSlide1View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeSlide1View.swift; sourceTree = "<group>"; };
 		DE68352A28926A7100FAEF96 /* WelcomeSlideIndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeSlideIndicatorView.swift; sourceTree = "<group>"; };
@@ -2334,7 +2334,7 @@
 		DE68352528926A7100FAEF96 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				DE68352628926A7100FAEF96 /* Onboarding.Chart.json */,
+				DE1D022528CB17BF003AC1FD /* Onboarding.Chart.json */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -2450,7 +2450,7 @@
 				96BF1CF626AA971700AEF6D3 /* SF-Pro-Rounded-Semibold.otf in Resources */,
 				96BF1CFE26AA973300AEF6D3 /* Localizable.strings in Resources */,
 				96BF1CFD26AA973300AEF6D3 /* LaunchScreen.storyboard in Resources */,
-				DE68367A28926A7200FAEF96 /* Onboarding.Chart.json in Resources */,
+				DE1D022628CB17BF003AC1FD /* Onboarding.Chart.json in Resources */,
 				96BF1ACB26AA95DE00AEF6D3 /* Assets.xcassets in Resources */,
 				96BF1CF826AA971700AEF6D3 /* SF-Pro-Rounded-Bold.otf in Resources */,
 			);
@@ -3051,7 +3051,7 @@
 				CODE_SIGN_ENTITLEMENTS = AWS/AWS.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 21;
+				CURRENT_PROJECT_VERSION = 22;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = ZY9AXRCYBM;
 				INFOPLIST_FILE = "$(SRCROOT)/AWS/Resource/Info.plist";
@@ -3060,7 +3060,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.2.0;
+				MARKETING_VERSION = 2.3.0;
 				PRODUCT_BUNDLE_IDENTIFIER = exam.aws;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "AWS Prod";
@@ -3080,7 +3080,7 @@
 				CODE_SIGN_ENTITLEMENTS = AWS/AWS.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 21;
+				CURRENT_PROJECT_VERSION = 22;
 				DEVELOPMENT_TEAM = ZY9AXRCYBM;
 				INFOPLIST_FILE = "$(SRCROOT)/AWS/Resource/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -3088,7 +3088,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.2.0;
+				MARKETING_VERSION = 2.3.0;
 				PRODUCT_BUNDLE_IDENTIFIER = exam.aws;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "AWS Prod";
@@ -3106,7 +3106,7 @@
 				CODE_SIGN_ENTITLEMENTS = StatsWidgetsExtension.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 21;
+				CURRENT_PROJECT_VERSION = 22;
 				DEVELOPMENT_TEAM = ZY9AXRCYBM;
 				INFOPLIST_FILE = StatsWidgets/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
@@ -3115,7 +3115,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 2.2.0;
+				MARKETING_VERSION = 2.3.0;
 				PRODUCT_BUNDLE_IDENTIFIER = exam.aws.widget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "AWS Widget Prod";
@@ -3133,7 +3133,7 @@
 				CODE_SIGN_ENTITLEMENTS = StatsWidgetsExtension.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 21;
+				CURRENT_PROJECT_VERSION = 22;
 				DEVELOPMENT_TEAM = ZY9AXRCYBM;
 				INFOPLIST_FILE = StatsWidgets/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
@@ -3142,7 +3142,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 2.2.0;
+				MARKETING_VERSION = 2.3.0;
 				PRODUCT_BUNDLE_IDENTIFIER = exam.aws.widget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "AWS Widget Prod";
